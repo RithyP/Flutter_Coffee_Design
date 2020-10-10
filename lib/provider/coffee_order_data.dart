@@ -2,5 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
 class CoffeeOrderData with ChangeNotifier {
-  int sugarPercentage = 0;
+  double sugarPercentage = 0;
+  void toNotifyListener() {
+    notifyListeners();
+  }
 }

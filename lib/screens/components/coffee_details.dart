@@ -196,9 +196,18 @@ class CoffeeOrder extends StatelessWidget {
               ],
             ),
           ),
+          //SizedBox(height: 28.3),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 24,
+              top: 35.0,
+            ),
+            child: CustomSlider(),
+          ),
           SizedBox(
             height: 53.3,
           ),
+
           //////////////////////////////////
           Align(
             alignment: Alignment.center,
@@ -233,7 +242,6 @@ class CoffeeOrder extends StatelessWidget {
             ),
           ),
           //////////////////////////////
-          CustomSlider(),
         ],
       ),
     );
