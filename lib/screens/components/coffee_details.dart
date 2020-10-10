@@ -171,6 +171,19 @@ class CoffeeOrder extends StatelessWidget {
                           color: Color(0xFFCF9775).withOpacity(0.4),
                         ),
                       ),
+                      // Container(
+                      //   padding: EdgeInsets.all(5),
+                      //   decoration: BoxDecoration(
+                      //     color: Colors.red,
+                      //     borderRadius: BorderRadius.all(
+                      //       Radius.circular(40),
+                      //     ),
+                      //   ),
+                      //   child: Image.asset(
+                      //     'assets/images/coffee_large.png',
+                      //     color: Colors.white,
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
