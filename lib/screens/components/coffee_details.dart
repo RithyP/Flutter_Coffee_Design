@@ -106,7 +106,7 @@ class CoffeeOrder extends StatelessWidget {
                     SizedBox(
                       //width: 67.0,
                       child: Text(
-                        coffeeData.coffeePrice.toString(),
+                        coffeeData.coffeePriceSmall.toString(),
                         style: TextStyle(
                           fontFamily: 'Sen',
                           fontSize: 30,
@@ -144,31 +144,58 @@ class CoffeeOrder extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      InkWell(
-                        onTap: () {},
-                        child: Image(
-                          image: AssetImage(
-                            'assets/images/coffee_small.png',
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(40),
                           ),
-                          color: Color(0xFFCF9775).withOpacity(0.4),
+                        ),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Image(
+                            image: AssetImage(
+                              'assets/images/coffee_small.png',
+                            ),
+                            color: Color(0xFFCF9775).withOpacity(0.4),
+                          ),
                         ),
                       ),
-                      InkWell(
-                        onTap: () {},
-                        child: Image(
-                          image: AssetImage(
-                            'assets/images/coffee_medium.png',
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(40),
                           ),
-                          color: Color(0xFFCF9775).withOpacity(0.3),
+                        ),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Image(
+                            image: AssetImage(
+                              'assets/images/coffee_medium.png',
+                            ),
+                            color: Color(0xFFCF9775).withOpacity(0.3),
+                          ),
                         ),
                       ),
-                      InkWell(
-                        onTap: () {},
-                        child: Image(
-                          image: AssetImage(
-                            'assets/images/coffee_large.png',
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(40),
                           ),
-                          color: Color(0xFFCF9775).withOpacity(0.4),
+                        ),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Image(
+                            image: AssetImage(
+                              'assets/images/coffee_large.png',
+                            ),
+                            color: Color(0xFFCF9775).withOpacity(0.4),
+                          ),
                         ),
                       ),
                       // Container(

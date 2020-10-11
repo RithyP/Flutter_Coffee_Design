@@ -1,8 +1,16 @@
 import 'package:flutter/cupertino.dart';
-import 'package:provider/provider.dart';
+
+enum CupSize {
+  Small,
+  Medium,
+  Large,
+}
 
 class CoffeeOrderData with ChangeNotifier {
-  double sugarPercentage = 0;
+  int quantity = 1;
+  CupSize cupSize = CupSize.Small;
+  double sugarPercentage = 100;
+
   void toNotifyListener() {
     notifyListeners();
   }
