@@ -13,6 +13,7 @@ class CoffeeDetailsAndQuantity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CoffeeOrderData coffeeOrderData = Provider.of<CoffeeOrderData>(context);
+    coffeeOrderData.currentCoffeeData = coffeeData;
     return Padding(
       /////////////
       padding: const EdgeInsets.only(

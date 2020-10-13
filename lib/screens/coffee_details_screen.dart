@@ -16,37 +16,6 @@ class CoffeeDetail extends StatelessWidget {
         child: CustomScrollView(
           physics: BouncingScrollPhysics(),
           slivers: [
-            // SliverAppBar(
-            //   backgroundColor: Color(0xFFFAF4EE),
-            //   leading: Padding(
-            //     padding: const EdgeInsets.only(top: 10.0),
-            //     child: IconButton(
-            //       color: Color(0xFF8C746A),
-            //       onPressed: () => Navigator.pop(context),
-            //       icon: Icon(Icons.arrow_back_ios),
-            //     ),
-            //   ),
-            //   expandedHeight: 369.09,
-            //   title: Padding(
-            //     padding: const EdgeInsets.only(
-            //       left: 10,
-            //       top: 10,
-            //     ),
-            //     child: Text(
-            //       '[Coffee Title]',
-            //       style: TextStyle(color: Colors.black),
-            //     ),
-            //   ),
-            //   centerTitle: true,
-            //   shape: RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.only(
-            //       bottomLeft: Radius.circular(45.0),
-            //       bottomRight: Radius.circular(45.0),
-            //     ),
-            //   ),
-            //   shadowColor: Colors.black,
-            //   elevation: 100,
-            // )
             SliverPersistentHeader(
               pinned: true,
               floating: false,
@@ -55,16 +24,13 @@ class CoffeeDetail extends StatelessWidget {
               ),
             ),
 
-            // SliverToBoxAdapter(
-            //   child: SizedBox(height: 39),
-            // ),
             SliverToBoxAdapter(
               child: CoffeeOrder(coffeeData: coffeeData),
             ),
             //SliverFillRemaining(),
             SliverToBoxAdapter(
               child: SizedBox(
-                height: 150,
+                height: 70,
               ),
             ),
           ],

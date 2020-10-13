@@ -1,4 +1,6 @@
+import 'package:cafe_app_freebies/provider/coffee_order_data.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class CustomSlider extends StatefulWidget {
   @override
@@ -7,8 +9,11 @@ class CustomSlider extends StatefulWidget {
 
 class _CustomSliderState extends State<CustomSlider> {
   double _value = 100;
+
   @override
   Widget build(BuildContext context) {
+    CoffeeOrderData coffeeOrderData =
+        Provider.of<CoffeeOrderData>(context, listen: false);
     print('Slider Rebuilt');
     return Container(
       width: 295.0,
@@ -41,6 +46,7 @@ class _CustomSliderState extends State<CustomSlider> {
           onChanged: (value) {
             setState(() {
               _value = value;
+              coffeeOrderData.sugarPercentage = value;
             });
           },
           divisions: 6,

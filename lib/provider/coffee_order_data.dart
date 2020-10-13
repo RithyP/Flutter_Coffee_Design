@@ -9,21 +9,20 @@ enum CupSize {
 }
 
 class CoffeeOrderData with ChangeNotifier {
-  final CoffeeData currentCoffeeData;
-  CoffeeOrderData({this.currentCoffeeData});
+  CoffeeData currentCoffeeData;
 
   int quantity = 0;
-  CupSize cupSize = CupSize.Small;
+  CupSize _cupSize = CupSize.Small;
   double sugarPercentage = 100;
   double _coffeePrice;
 
   double get coffeePrice {
     if (cupSize == CupSize.Small) {
-      _coffeePrice = 10000;
+      _coffeePrice = currentCoffeeData.coffeePriceSmall;
     } else if (cupSize == CupSize.Medium) {
-      _coffeePrice = 15000;
+      _coffeePrice = currentCoffeeData.coffeePriceMedium;
     } else if (cupSize == CupSize.Large) {
-      _coffeePrice = 19000;
+      _coffeePrice = currentCoffeeData.coffeePriceLarge;
     }
     return _coffeePrice;
   }
@@ -41,18 +40,22 @@ class CoffeeOrderData with ChangeNotifier {
   }
 
   void onClickedSmallCup() {
-    cupSize = CupSize.Small;
+    _cupSize = CupSize.Small;
     notifyListeners();
   }
 
   void onClickedMediumCup() {
-    cupSize = CupSize.Medium;
+    _cupSize = CupSize.Medium;
     notifyListeners();
   }
 
   void onClickedLargeCup() {
-    cupSize = CupSize.Large;
+    _cupSize = CupSize.Large;
 
     notifyListeners();
+  }
+
+  CupSize get cupSize {
+    return _cupSize;
   }
 }

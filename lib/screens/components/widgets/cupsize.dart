@@ -32,7 +32,9 @@ class CupSizeWidget extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: Colors.transparent,
+                    color: coffeeOrderData.cupSize == CupSize.Small
+                        ? Color(0xFFCF9775).withOpacity(0.4)
+                        : Colors.transparent,
                     borderRadius: BorderRadius.all(
                       Radius.circular(40),
                     ),
@@ -45,14 +47,16 @@ class CupSizeWidget extends StatelessWidget {
                       image: AssetImage(
                         'assets/images/coffee_small.png',
                       ),
-                      color: Color(0xFFCF9775).withOpacity(0.4),
+                      color: Color(0xFFCF9775).withOpacity(1.0),
                     ),
                   ),
                 ),
                 Container(
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: Colors.transparent,
+                    color: coffeeOrderData.cupSize == CupSize.Medium
+                        ? Color(0xFFCF9775).withOpacity(0.4)
+                        : Colors.transparent,
                     borderRadius: BorderRadius.all(
                       Radius.circular(40),
                     ),
@@ -65,14 +69,16 @@ class CupSizeWidget extends StatelessWidget {
                       image: AssetImage(
                         'assets/images/coffee_medium.png',
                       ),
-                      color: Color(0xFFCF9775).withOpacity(0.3),
+                      color: Color(0xFFCF9775).withOpacity(0.9),
                     ),
                   ),
                 ),
                 Container(
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: Colors.transparent,
+                    color: coffeeOrderData.cupSize == CupSize.Large
+                        ? Color(0xFFCF9775).withOpacity(0.4)
+                        : Colors.transparent,
                     borderRadius: BorderRadius.all(
                       Radius.circular(40),
                     ),
@@ -85,7 +91,7 @@ class CupSizeWidget extends StatelessWidget {
                       image: AssetImage(
                         'assets/images/coffee_large.png',
                       ),
-                      color: Color(0xFFCF9775).withOpacity(0.4),
+                      color: Color(0xFFCF9775).withOpacity(1.0),
                     ),
                   ),
                 ),
