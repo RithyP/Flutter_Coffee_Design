@@ -1,3 +1,5 @@
+import 'package:cafe_app_freebies/models/coffeedata_model.dart';
+import 'package:cafe_app_freebies/provider/coffeedata.dart';
 import 'package:cafe_app_freebies/provider/page_index.dart';
 import 'package:cafe_app_freebies/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
@@ -28,8 +30,15 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: ChangeNotifierProvider(
-        create: (context) => BottomNaviBarProvider(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => BottomNaviBarProvider(),
+          ),
+          ChangeNotifierProvider(
+            create: (context) => TempCoffeeData(),
+          ),
+        ],
         child: TabsScreen(),
       ),
     );

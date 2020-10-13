@@ -1,13 +1,16 @@
-import 'package:cafe_app_freebies/coffeedata.dart';
+import 'package:cafe_app_freebies/provider/coffeedata.dart';
 import 'package:cafe_app_freebies/models/coffeedata_model.dart';
 import 'package:cafe_app_freebies/screens/coffee_details_screen.dart';
 import 'package:flutter/material.dart';
 
-class MenuList extends StatelessWidget {
-  final List<CoffeeData> coffeeList = Temp_Data;
+import 'package:provider/provider.dart';
 
+class MenuList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final coffeeData = Provider.of<TempCoffeeData>(context);
+    final coffeeList = coffeeData.coffeeData;
+
     return Expanded(
       child: ListView.builder(
         physics: BouncingScrollPhysics(),

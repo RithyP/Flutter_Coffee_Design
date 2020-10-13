@@ -3,13 +3,17 @@
 class CoffeeData {
   final int coffeeId;
   final String coffeeName;
-  final double coffeePrice;
+  final double coffeePriceSmall;
+  final double coffeePriceMedium;
+  final double coffeePriceLarge;
   final String imageAssets;
 
   const CoffeeData({
     this.coffeeId,
     this.coffeeName,
-    this.coffeePrice,
+    this.coffeePriceSmall,
+    this.coffeePriceMedium,
+    this.coffeePriceLarge,
     this.imageAssets,
   });
 }
